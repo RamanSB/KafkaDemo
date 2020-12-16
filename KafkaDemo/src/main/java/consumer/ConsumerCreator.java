@@ -17,7 +17,7 @@ public class ConsumerCreator {
     //I believe it makes logical sense for the types of the consumer to match the types of the producer
     // as what is produced is what is consumed
 
-    public Consumer<Long, String> createConsumer(){
+    public static Consumer<Long, String> createConsumer(){
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, IKafkaConstants.KAFKA_BROKERS);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, IKafkaConstants.GROUP_ID_CONFIG); //Used to identify what group this consumer belongs to

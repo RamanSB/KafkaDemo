@@ -3,7 +3,10 @@ package constants;
 
 public interface IKafkaConstants {
 
-    public static String KAFKA_BROKERS = "localhost:9091"; //The hostname:port of the kafka server that serves as a broker we want to connect to - values are found in the config/server.properties file
+    //The hostname:port of the kafka server that serves as a broker we want to connect to - values are found in the config/server.properties file
+    //If we are running kafka in clusters we will comma separate all brokers localhost:port pairing.
+    public static String KAFKA_BROKERS = "localhost:9091";
+
     public static Integer MESSAGE_COUNT = 1000;
     public static String CLIENT_ID = "client1";
     public static String TOPIC_NAME = "demo";
